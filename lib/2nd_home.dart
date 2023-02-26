@@ -15,6 +15,7 @@ class _SecondHomeState extends State<SecondHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text("Second HOme"),
       ),
@@ -513,7 +514,9 @@ class _SecondHomeState extends State<SecondHome> {
             ),
 
             // brand
-
+            SizedBox(
+              height: 15,
+            ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
@@ -597,32 +600,479 @@ class _SecondHomeState extends State<SecondHome> {
               ],
             ),
             // Food essential
-            Padding(
-              padding: const EdgeInsets.only(
-                  left: 10.0, right: 10, top: 20, bottom: 7),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'Food Essentials',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      Navigator.pushAndRemoveUntil(
-                          context,
-                          MaterialPageRoute(builder: (context) => SecondHome()),
-                          (route) => false);
-                    },
-                    child: Text(
-                      'View All Products',
-                      style: TextStyle(
-                        color: Colors.blue,
+            SizedBox(
+              height: 15,
+            ),
+            Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(
+                      left: 10.0, right: 10, top: 20, bottom: 7),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Food Essentials',
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold),
                       ),
-                    ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.pushAndRemoveUntil(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => SecondHome()),
+                              (route) => false);
+                        },
+                        child: Text(
+                          'View All Products',
+                          style: TextStyle(
+                            color: Colors.blue,
+                          ),
+                        ),
+                      ),
+
+                      // card for food essentials
+                    ],
                   ),
-                ],
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding:
+                            const EdgeInsets.only(left: 8.0, right: 8, top: 20),
+                        child: Center(
+                          child: Container(
+                            height: 265,
+                            width: 200,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(15),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(1),
+                                  // spreadRadius: 2,
+                                  blurRadius: 3,
+                                  offset: Offset(0, 2),
+                                ),
+                              ],
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Image.asset('assets/images/apple.png'),
+                                  Text(
+                                    'Gshok Watch Bundle...',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        'AED 99.0',
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          color: Colors.blue,
+                                        ),
+                                      ),
+                                      Icon(
+                                        Icons.favorite_border_outlined,
+                                        color: Colors.blue,
+                                      )
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding:
+                            const EdgeInsets.only(left: 8.0, right: 8, top: 20),
+                        child: Center(
+                          child: Container(
+                            height: 265,
+                            width: 200,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(15),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(1),
+                                  // spreadRadius: 3,
+                                  blurRadius: 10,
+                                  offset: Offset(0, 3),
+                                ),
+                              ],
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Image.asset('assets/images/apple.png'),
+                                  Text(
+                                    'Gshok Watch Bundle...',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        'AED 99.0',
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          color: Colors.blue,
+                                        ),
+                                      ),
+                                      Icon(
+                                        Icons.favorite_border_outlined,
+                                        color: Colors.blue,
+                                      )
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding:
+                            const EdgeInsets.only(left: 8.0, right: 8, top: 20),
+                        child: Center(
+                          child: Container(
+                            height: 265,
+                            width: 200,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(15),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(1),
+                                  // spreadRadius: 3,
+                                  blurRadius: 10,
+                                  offset: Offset(0, 3),
+                                ),
+                              ],
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Image.asset('assets/images/apple.png'),
+                                  Text(
+                                    'Gshok Watch Bundle...',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        'AED 99.0',
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          color: Colors.blue,
+                                        ),
+                                      ),
+                                      Icon(
+                                        Icons.favorite_border_outlined,
+                                        color: Colors.blue,
+                                      )
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+// recomend for you
+            SizedBox(
+              height: 15,
+            ),
+            Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(
+                      left: 10.0, right: 10, top: 20, bottom: 7),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Recomend for you',
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.pushAndRemoveUntil(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => SecondHome()),
+                              (route) => false);
+                        },
+                        child: Text(
+                          'View All Products',
+                          style: TextStyle(
+                            color: Colors.blue,
+                          ),
+                        ),
+                      ),
+
+                      // card for food recoment
+                    ],
+                  ),
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding:
+                            const EdgeInsets.only(left: 8.0, right: 8, top: 20),
+                        child: Center(
+                          child: Container(
+                            height: 265,
+                            width: 200,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(15),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(1),
+                                  // spreadRadius: 2,
+                                  blurRadius: 3,
+                                  offset: Offset(0, 2),
+                                ),
+                              ],
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Image.asset('assets/images/apple.png'),
+                                  Text(
+                                    'Gshok Watch Bundle...',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        'AED 99.0',
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          color: Colors.blue,
+                                        ),
+                                      ),
+                                      Icon(
+                                        Icons.favorite_border_outlined,
+                                        color: Colors.blue,
+                                      )
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding:
+                            const EdgeInsets.only(left: 8.0, right: 8, top: 20),
+                        child: Center(
+                          child: Container(
+                            height: 265,
+                            width: 200,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(15),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(1),
+                                  // spreadRadius: 3,
+                                  blurRadius: 10,
+                                  offset: Offset(0, 3),
+                                ),
+                              ],
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Image.asset('assets/images/apple.png'),
+                                  Text(
+                                    'Gshok Watch Bundle...',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        'AED 99.0',
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          color: Colors.blue,
+                                        ),
+                                      ),
+                                      Icon(
+                                        Icons.favorite_border_outlined,
+                                        color: Colors.blue,
+                                      )
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding:
+                            const EdgeInsets.only(left: 8.0, right: 8, top: 20),
+                        child: Center(
+                          child: Container(
+                            height: 265,
+                            width: 200,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(15),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(1),
+                                  // spreadRadius: 3,
+                                  blurRadius: 10,
+                                  offset: Offset(0, 3),
+                                ),
+                              ],
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Image.asset('assets/images/apple.png'),
+                                  Text(
+                                    'Gshok Watch Bundle...',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        'AED 99.0',
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          color: Colors.blue,
+                                        ),
+                                      ),
+                                      Icon(
+                                        Icons.favorite_border_outlined,
+                                        color: Colors.blue,
+                                      )
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 50,
+            ),
+          ],
+        ),
+      ),
+      // floatingActionButton: FloatingActionButton(onPressed: () {}),
+      // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: BottomAppBar(
+        // notchMargin: 5,
+        // elevation: 10,
+        // clipBehavior: Clip.antiAlias,
+        // shape: CircularNotchedRectangle(),
+        child: BottomNavigationBar(
+          items: [
+            BottomNavigationBarItem(
+              backgroundColor: Colors.grey,
+              icon: Icon(
+                Icons.home,
               ),
+              label: 'home',
+            ),
+            BottomNavigationBarItem(
+              backgroundColor: Colors.grey,
+              icon: Icon(
+                Icons.home,
+              ),
+              label: 'home',
+            ),
+            BottomNavigationBarItem(
+                icon: FloatingActionButton(
+                  onPressed: () {},
+                  elevation: 10,
+                ),
+                label: 'catagory'),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home,
+              ),
+              label: 'home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home,
+              ),
+              label: 'home',
             ),
           ],
         ),
