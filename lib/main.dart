@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sojibtestp/2nd_home.dart';
 import 'package:sojibtestp/home%20page.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home:SecondHome(),
     );
   }
 }
