@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:sojibtestp/pages/home.dart';
 import 'package:sojibtestp/widgets/buildidicator.dart';
 import 'package:sojibtestp/widgets/buildimage.dart';
 
@@ -18,8 +19,18 @@ class _SecondHomeState extends State<SecondHome> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("Second HOme"),
+        title: Text("HOme"),
+        centerTitle: true,
       ),
+      floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          child: CircleAvatar(
+            child: Image.asset('assets/images/pngwing 19.png'),
+            radius: 30,
+          )
+          //  Icon(Icons.add),
+          ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -890,11 +901,14 @@ class _SecondHomeState extends State<SecondHome> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Text(
-                  'Shop By Brand',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
+                Padding(
+                  padding: const EdgeInsets.only(left: 10.0),
+                  child: Text(
+                    'Shop By Brand',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
                 SingleChildScrollView(
@@ -1404,43 +1418,34 @@ class _SecondHomeState extends State<SecondHome> {
         ),
       ),
       bottomNavigationBar: BottomAppBar(
-        child: BottomNavigationBar(
-          items: [
-            BottomNavigationBarItem(
-              backgroundColor: Colors.grey,
-              icon: Icon(
-                Icons.home,
+          color: Colors.grey,
+          notchMargin: 5,
+          elevation: 10,
+          shape: CircularNotchedRectangle(),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              IconButton(
+                onPressed: () {
+                  Navigator.push((context),
+                      MaterialPageRoute(builder: (context) => Home()));
+                },
+                icon: Icon(Icons.home),
               ),
-              label: 'home',
-            ),
-            BottomNavigationBarItem(
-              backgroundColor: Colors.grey,
-              icon: Icon(
-                Icons.home,
+              IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.list_alt_rounded),
               ),
-              label: 'home',
-            ),
-            BottomNavigationBarItem(
-                icon: FloatingActionButton(
-                  onPressed: () {},
-                  elevation: 10,
-                ),
-                label: 'catagory'),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.home,
+              IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.shopping_cart),
               ),
-              label: 'home',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.home,
+              IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.person_2),
               ),
-              label: 'home',
-            ),
-          ],
-        ),
-      ),
+            ],
+          )),
     );
   }
 }
